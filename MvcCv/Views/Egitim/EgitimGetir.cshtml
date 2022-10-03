@@ -1,0 +1,37 @@
+﻿@model MvcCv.Models.Entity.TblEgitimlerim
+@{
+    ViewBag.Title = "EgitimGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Egitim Bilgisi Güncelleme Sayfası</h2>
+
+
+<form method="post">
+    @Html.Label("Deneyim ID")
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Başlık")
+    @Html.TextBoxFor(x => x.Baslik, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Fakülte")
+    @Html.TextBoxFor(x => x.AltBaslik1, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Bölüm")
+    @Html.TextBoxFor(x => x.Altbaslik2, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Gno")
+    @Html.TextAreaFor(x => x.GNO, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @style = "color:red" })
+    <br />
+    @Html.Label("Tarih")
+    @Html.TextAreaFor(x => x.Tarih, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.Baslik, "", new { @style = "color:red" })
+    <br />
+
+    <button class="btn btn-info">Güncelle</button>
+</form>
